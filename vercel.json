@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "remix.config.js",
+        "src": "vite.config.js",
         "use": "@vercel/remix"
       }
     ],
