@@ -107,7 +107,8 @@ export const Home = () => {
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         title="BridgeHub: uma ponte para investidores e startups"
-        description="Desenhei e participei do desenvolvimento de uma plataforma de equity crowdfunding para investidores e startups."
+        description="Desenhei e participei do desenvolvimento de uma plataforma 
+        de equity crowdfunding para startups e investidores."
         buttonText="Ver projeto"
         buttonLink="/projects/bridgehub"
         model={{
