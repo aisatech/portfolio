@@ -7,6 +7,8 @@ import gamestackTexture from '~/assets/gamestack-login.jpg';
 import brhPhone from '~/assets/brh-mobile.png';
 import brhHome from '~/assets/brh-home-mobile.png';
 import brhLaptop from '~/assets/brh-tela-large.png';
+import stnPos from '~/assets/Tela_Campanha.png';
+import stnRecibos from '~/assets/BobinasA8.png';
 import sliceTextureLarge from '~/assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
 import sliceTexture from '~/assets/slice-app.jpg';
@@ -108,7 +110,7 @@ export const Home = () => {
         index={1}
         title="BridgeHub: uma ponte para investidores e startups"
         description="Desenhei e participei do desenvolvimento de uma plataforma 
-        de equity crowdfunding para startups e investidores."
+        de equity crowdfunding para startups e investidores. Este produto foi adquirido pelo BTG Pactual."
         buttonText="Ver projeto"
         buttonLink="/projects/bridgehub"
         model={{
@@ -116,39 +118,43 @@ export const Home = () => {
           alt: 'Tela inicial para investidores na plataforma BridgeHub',
           textures: [
             {
-              srcSet: `${brhPhone} 1280w, ${brhPhone} 2560w`,
+              srcSet: `${brhPhone} 375w, ${brhPhone} 750w`,
               placeholder: sprTexturePlaceholder,
             },
-            {
-              srcSet: `${brhHome} 1280w, ${brhHome} 2560w`,
-              placeholder: sprTexturePlaceholder,
-            },
+      
+              {
+                srcSet: `${brhHome} 375w, ${brhHome} 750w`,
+                placeholder: sliceTexturePlaceholder,
+              },
           ],
         }}
       />
       <ProjectSummary
+
         id="project-2"
         alternate
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
+        title="Stone: experiências de pagamento"
+        description="Há quase 2 anos, desenho experiências de pagamento em máquinas de cartão de crédito para todas as marcas da companhia (Ton, Stone e Pagar.me). Veja um resumo dos projetos que atuei"
+        buttonText="Ver projetos"
         buttonLink="https://gamestack.hamishw.com"
         model={{
-          type: 'phone',
+          type: 'credito',
           alt: 'App login screen',
           textures: [
             {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
+              srcSet: `${stnRecibos} 375w, ${stnRecibos} 750w`,
               placeholder: gamestackTexturePlaceholder,
             },
+
             {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: `${stnPos} 375w, ${stnPos} 750w`,
+              placeholder: gamestackTexturePlaceholder,
             },
           ],
+          
         }}
       />
       <ProjectSummary

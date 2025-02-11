@@ -47,6 +47,7 @@ export const Phone = () => (
 
 export const Laptop = () => (
   <StoryContainer padding={0}>
+     {console.log("Modelo completo:", deviceModels.laptop)}
     <Model
       style={modelStyle}
       cameraPosition={{ x: 0, y: 0, z: 8 }}
@@ -64,3 +65,58 @@ export const Laptop = () => (
     />
   </StoryContainer>
 );
+
+export const Phonetop = () => 
+  
+  (
+  <StoryContainer padding={0}>
+    <Model
+      style={modelStyle}
+      cameraPosition={{ x: 0, y: 0, z: 11.5 }}
+      alt="Phone models"
+      models={[
+        {
+          ...deviceModels.phone,
+          position: { x: -0.6, y: 0.8, z: 0.1 },
+          texture: {
+            srcSet: `${phoneTexture} 375w, ${phoneTextureLarge} 750w`,
+            placeholder: phoneTexturePlaceholder,
+          },
+        },
+        {
+          ...deviceModels.laptop,
+          position: { x: 0.6, y: -0.8, z: 0.4 },
+          texture: {
+            srcSet: `${laptopTexture} 800w, ${laptopTextureLarge} 1920w`,
+            placeholder: laptopTexturePlaceholder,
+          },
+        },
+      ]}
+    />
+  </StoryContainer>
+)
+
+export const Credito = () => (
+  
+ 
+  <StoryContainer padding={0}>
+    <Model
+      style={modelStyle}
+      cameraPosition={{ x: 0, y: 0, z: 5}}
+      alt="credito models"
+      models={[
+        {
+          ...deviceModels.credito,
+          position: { x: 0, y: 0, z: 1},
+          texture: {
+            srcSet: `${phoneTexture} 375w, ${phoneTextureLarge} 750w`,
+            placeholder: phoneTexturePlaceholder,
+          },
+        },
+      ]}
+      
+    />
+  </StoryContainer>
+);
+
+

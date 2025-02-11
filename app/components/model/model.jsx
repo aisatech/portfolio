@@ -87,6 +87,7 @@ export const Model = ({
   const reduceMotion = useReducedMotion();
   const rotationX = useSpring(0, rotationSpringConfig);
   const rotationY = useSpring(0, rotationSpringConfig);
+  const rotationZ = useSpring(0, rotationSpringConfig);
 
   useEffect(() => {
     const { clientWidth, clientHeight } = container.current;
@@ -277,7 +278,7 @@ export const Model = ({
     modelGroup.current.rotation.y = rotationY.get();
 
     renderer.current.render(scene.current, camera.current);
-  }, [blurShadow, rotationX, rotationY]);
+  }, [blurShadow, rotationX, rotationY,]);
 
   // Handle mouse move animation
   useEffect(() => {
@@ -368,12 +369,15 @@ const Device = ({
   const reduceMotion = useReducedMotion();
   const placeholderScreen = createRef();
 
+
   useEffect(() => {
+
     const applyScreenTexture = async (texture, node) => {
       texture.colorSpace = SRGBColorSpace;
       texture.flipY = false;
       texture.anisotropy = renderer.current.capabilities.getMaxAnisotropy();
       texture.generateMipmaps = false;
+  
 
       // Decode the texture to prevent jank on first render
       await renderer.current.initTexture(texture);
@@ -381,11 +385,17 @@ const Device = ({
       node.material.color = new Color(0xffffff);
       node.material.transparent = true;
       node.material.map = texture;
-    };
+      node.material.needsUpdate = true; 
+      node.material.alphaTest = 0.5; // Garante que a textura com transparência não suma
+      node.material.depthWrite = false; // Evita que a profundidade esconda a textura
+      
 
+      
+    };
+  
     // Generate promises to await when ready
     const load = async () => {
-      const { texture, position, url } = model;
+      const { texture, position, url, } = model;
       let loadFullResTexture;
       let playAnimation;
 
@@ -399,7 +409,14 @@ const Device = ({
       gltf.scene.traverse(async node => {
         if (node.material) {
           node.material.color = new Color(0x1f2025);
+          if (node.material) {
+            node.material.color = new Color(0x1f2025);
+          }
+
         }
+
+
+      
 
         if (node.name === MeshType.Screen) {
           // Create a copy of the screen mesh so we can fade it out
@@ -439,7 +456,7 @@ const Device = ({
           const startPosition = new Vector3(
             targetPosition.x,
             targetPosition.y - 1,
-            targetPosition.z
+            targetPosition.z,
           );
 
           gltf.scene.position.set(...startPosition.toArray());
@@ -528,3 +545,4 @@ const Device = ({
 };
 
 export default Model;
+

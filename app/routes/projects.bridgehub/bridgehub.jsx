@@ -4,6 +4,7 @@ import imageSprBackgroundVolcanismPlaceholder from '~/assets/spr-background-volc
 import imageSprBackgroundVolcanism from '~/assets/spr-background-volcanism.jpg';
 import backgroundBrh from '~/assets/background-brh.jpg';
 import brhTelaLarge from '~/assets/brh-tela-large.png';
+import brhBg from '~/assets/bg-brh.jpg';
 import imageSprComponentsDarkLarge from '~/assets/spr-components-dark-large.png';
 import imageSprComponentsDarkPlaceholder from '~/assets/spr-components-dark-placeholder.png';
 import imageSprComponentsDark from '~/assets/spr-components-dark.png';
@@ -179,7 +180,7 @@ export const SmartSparrow = () => {
                 desenvolvi os componentes e layout das telas no Figma. Assim que concluí esta fase do projeto, me 
                 incorporei ao time de desenvolvedores, com mais cinco devs, liderados pelo CTO. Utilizamos o storybook
                 para criar e testar os componentes de forma isolada. A aplicação foi construída utilizando Next.js, 
-                Node.js, MongoDB e alguns serviços como AWS Lambda e um serviço de validação de comprovantes de pagamento.
+                Node.js, MongoDB e alguns serviços em núvem, como AWS Lambda e um serviço de validação de comprovantes de pagamento.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -205,12 +206,11 @@ export const SmartSparrow = () => {
               sizes="100vw"
             />
             <ProjectTextRow>
-              <ProjectSectionHeading>Design system docs</ProjectSectionHeading>
+              <ProjectSectionHeading>Processo e rotina</ProjectSectionHeading>
               <ProjectSectionText>
-                A design system is useless if no one knows how to use it, so we put
-                together a comprehensive documentation website to cover principles, ux,
-                accessibility, and component guidelines for designers and engineers
-                working with the system.
+                Nossa rotina durante 1 ano foi baseada em metodologias ágeis como Scrum. 
+                Daily-meetings, sprints, e trabalho orientado a resultados faziam parte da nossa rotina.
+                As ferramentas que gerenciavam essa rotina eram Monday e o Microsoft Teams. 
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -220,11 +220,11 @@ export const SmartSparrow = () => {
             backgroundOverlayOpacity={0.5}
             backgroundElement={
               <Image
-                srcSet={`${imageSprBackgroundVolcanism} 1280w, ${imageSprBackgroundVolcanismLarge} 2560w`}
+                srcSet={`${brhBg} 1280w, ${brhBg} 2560w`}
                 width={1280}
                 height={900}
                 placeholder={imageSprBackgroundVolcanismPlaceholder}
-                alt="A dramatic ocean scene with lava forming a new land mass."
+                alt="Imagem de um astronauta orbitando a Terra. Fonte: NASA"
                 sizes="100vw"
               />
             }
@@ -232,12 +232,14 @@ export const SmartSparrow = () => {
             <ProjectSectionColumns width="full">
               <ProjectSectionContent width="full">
                 <ProjectTextRow width="s">
-                  <ProjectSectionHeading>Motion design</ProjectSectionHeading>
+                  <ProjectSectionHeading>Design Concept</ProjectSectionHeading>
                   <ProjectSectionText>
-                    Animation was a core principle in making the authoring experience a
-                    more understandable process. Elements animate in ways that indicate
-                    the cause and effect of each interaction to improve the fluidity of
-                    the overall experience.
+                    Eu trouxe elementos do espaço sideral para fazer uma analogia com o
+                    mercado de equity crowfunding, que era um universo inexplorado ainda no Brasil. 
+                    Ao mesmo tempo, me apropriei da inovação e tecnologia do ecossistema de engenharia espacial e
+                    trouxe de forma análoga às tecnologias que estavamos inserindo no mercado financeiro. 
+        
+              
                   </ProjectSectionText>
                 </ProjectTextRow>
               </ProjectSectionContent>

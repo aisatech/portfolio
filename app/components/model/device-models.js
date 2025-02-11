@@ -1,5 +1,7 @@
 import iphone11 from '~/assets/iphone-11.glb';
 import macbookPro from '~/assets/macbook-pro.glb';
+import maquinaP2 from '~/assets/pos-p2.glb';
+
 
 export const ModelAnimationType = {
   SpringUp: 'spring-up',
@@ -20,5 +22,12 @@ export const deviceModels = {
     height: 800,
     position: { x: 0, y: 0, z: 0 },
     animation: ModelAnimationType.LaptopOpen,
+  },
+  credito: {
+    url: maquinaP2,
+    width: 374,
+    height: 512,
+    position: { x: 0, y: 0, z: 0 },
+    animation: ModelAnimationType.SpringUp,
   },
 };

@@ -11,7 +11,7 @@ import { useWindowSize } from '~/hooks';
 import { Suspense, lazy, useState } from 'react';
 import { cssProps, media } from '~/utils/style';
 import { useHydrated } from '~/hooks/useHydrated';
-import katakana from './katakana.svg';
+import katakana from './StoneCo.svg';
 import styles from './project-summary.module.css';
 
 const Model = lazy(() =>
@@ -31,6 +31,13 @@ export function ProjectSummary({
   alternate,
   ...rest
 }) {
+
+  const viewBoxMapping = {
+    "katakana-project": "0 0 162 33",
+    "outro-id": "0 0 200 50", // outro tamanho para outro ID
+    // Adicione mais mapeamentos conforme necessário
+  };
+
   const [focused, setFocused] = useState(false);
   const [modelLoaded, setModelLoaded] = useState(false);
   const { theme } = useTheme();
@@ -39,7 +46,9 @@ export function ProjectSummary({
   const titleId = `${id}-title`;
   const isMobile = width <= media.tablet;
   const svgOpacity = theme === 'light' ? 0.7 : 1;
+  const viewBox = viewBoxMapping[id] || "0 0 162 33"; 
   const indexText = index < 10 ? `0${index}` : index;
+  const creditoSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
   const phoneSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
   const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
 
@@ -48,6 +57,8 @@ export function ProjectSummary({
   }
 
   function renderKatakana(device, visible) {
+
+  
     return (
       <svg
         type="project"
@@ -56,9 +67,11 @@ export function ProjectSummary({
         style={cssProps({ opacity: svgOpacity })}
         className={styles.svg}
         data-device={device}
-        viewBox="0 0 751 136"
+        viewBox={viewBox}
       >
-        <use href={`${katakana}#katakana-project`} />
+      <use href={`${katakana.split('?')[0]}#katakana-project`} />
+
+
       </svg>
     );
   }
@@ -99,8 +112,53 @@ export function ProjectSummary({
   }
 
   function renderPreview(visible) {
+    console.log("DEBUG: ID recebido no renderPreview:", id);
+
     return (
       <div className={styles.preview}>
+
+{model.type === 'credito' && (
+          <>
+           {renderKatakana('credito', visible)} 
+            <div className={styles.model} data-device="credito">
+              {!modelLoaded && (
+                <Loader center className={styles.loader} data-visible={visible} />
+              )}
+              {isHydrated && visible && (
+                <Suspense>
+                  <Model
+                    alt={model.alt}
+                    cameraPosition={{ x: 0, y: 0, z: 5 }}
+                    showDelay={700}
+                    onLoad={handleModelLoad}
+                    show={visible}
+                    models={[
+                      {
+                        ...deviceModels.credito,
+                        position: { x: 0, y: 0, z: 1},
+                        texture: {
+                          ...model.textures[0],
+                          sizes: creditoSizes,
+                        },
+                      },
+
+                      {
+                        ...deviceModels.credito,
+                        position: { x: -1, y: 0.3, z: 1},
+                        texture: {
+                          ...model.textures[1],
+                          sizes: creditoSizes,
+                        },
+                      },
+
+                    ]}
+                  />
+                </Suspense>
+              )}
+            </div>
+          </>
+        )}
+
         {model.type === 'laptop' && (
           <>
             {renderKatakana('laptop', visible)}

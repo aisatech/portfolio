@@ -2,16 +2,24 @@ __  __  __
 \ \ \ \ \/
  \ \/\ \
   \/  \/
+ ___
+|   )
+|___)
 
+_______________________________________________________________________________
 The humans.txt file explains the team, technology,
-and graphic assets behind this site humanstxt.org.
+and graphic assets behind this site
 
 _______________________________________________________________________________
 
 DESIGNER | デザイナー
 
 Hamish Williams
-Hand crafted design & web development
+Design e desenvolvimento de todo o layout e componentes;
+
+Isabelle Oliveira
+Design, componentes, desenvolvimento e deploy;
+
 
 Design tools:
 Figma

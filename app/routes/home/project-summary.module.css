@@ -175,12 +175,25 @@
     }
   }
 
-  &[data-device='phone'] {
+  &[data-device='credito'] {
     position: absolute;
-    bottom: 23%;
+    bottom: 90%;
     transform: translateY(50%);
     width: 100%;
     transition-delay: 800ms;
+
+    @media (--mediaTablet) {
+      width: 80%;
+      bottom: 23%;
+    }
+  }
+
+  &[data-device='phone'] {
+    position: absolute;
+    bottom: 75%;
+    transform: translateX(50%);
+    width: 100%;
+    transition-delay: 500ms;
 
     @media (--mediaTablet) {
       width: 80%;
