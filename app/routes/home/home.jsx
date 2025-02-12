@@ -6,6 +6,7 @@ import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jp
 import gamestackTexture from '~/assets/gamestack-login.jpg';
 import brhPhone from '~/assets/brh-mobile.png';
 import brhHome from '~/assets/brh-home-mobile.png';
+import capaStone from '~/assets/Cover.png';
 import brhLaptop from '~/assets/brh-tela-large.png';
 import stnPos from '~/assets/Tela_Campanha.png';
 import stnRecibos from '~/assets/BobinasA8.png';
@@ -136,10 +137,10 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Stone: experiências de pagamento"
-        description="Há quase 2 anos, desenho experiências de pagamento em máquinas de cartão de crédito para todas as marcas da companhia (Ton, Stone e Pagar.me). Veja um resumo dos projetos que atuei"
-        buttonText="Ver projetos"
-        buttonLink="https://gamestack.hamishw.com"
+        title="Novo modelo de campanhas no POS"
+        description="Participei do desenvolvimento de um modelo unificado para a divulgação de campanhas no POS das marcas Ton e Stone, otimizando o uso de dados móveis e gerando economia para a companhia."
+        buttonText="Ver projeto"
+        buttonLink="/projects/stonepos"
         model={{
           type: 'credito',
           alt: 'App login screen',
@@ -162,16 +163,16 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View project"
-        buttonLink="/projects/slice"
+        title="Otimização de artigos internos para treinamento de pessoal e LLM's"
+        description="Protagonizei um projeto interno que consistiu em otimizar artigos para o treinamento de pessoal e também de LLM's da própria companhia. "
+        buttonText="Entre em contato para saber mais"
+        buttonLink="/projects/projetointerno"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
+              srcSet: `${capaStone} 800w, ${capaStone} 1920w`,
               placeholder: sliceTexturePlaceholder,
             },
           ],

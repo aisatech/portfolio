@@ -112,8 +112,6 @@ export function ProjectSummary({
   }
 
   function renderPreview(visible) {
-    console.log("DEBUG: ID recebido no renderPreview:", id);
-
     return (
       <div className={styles.preview}>
 
