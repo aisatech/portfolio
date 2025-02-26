@@ -43,7 +43,7 @@ import styles from './stonepos.module.css';
 
 const title = 'Novo modelo de campanhas no POS';
 const description =
-  'Fui destaque, junto a minha equipe, no desenvolvimento de um padrão de envio e exibição para campanhas de marketing no POS (maquininha). O modelo foi pensado para ser padronizado entre as marcas e sistemas operacionais com código otimizado, permitindo o envio sem necessidade de deploy. Como resultado, reduzimos significativamente o consumo de dados e melhoramos o desempenho e a leitura das campanhas de marketing. ';
+  'Fui destaque, junto à minha equipe, no desenvolvimento de um padrão de envio e exibição para campanhas de marketing no POS (maquininha). O modelo foi pensado para ser padronizado entre as marcas e sistemas operacionais com código otimizado, permitindo o envio sem necessidade de deploy. Como resultado, reduzimos significativamente o consumo de dados e melhoramos o desempenho e a leitura das campanhas de marketing. ';
 const roles = ['Research', 'Product Design','Development' ];
 
 export const meta = () => {

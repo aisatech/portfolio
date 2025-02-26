@@ -110,8 +110,9 @@ export const Home = () => {
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         title="BridgeHub: uma ponte para investidores e startups"
-        description="Desenhei e participei do desenvolvimento de uma plataforma 
-        de equity crowdfunding para startups e investidores. Este produto foi adquirido pelo BTG Pactual."
+        description="Desenhei a experiência e interface de um aplicativo de equity crowdfunding e 
+        atuei no desenvolvimento do frontend em colaboração com a equipe. A plataforma possibilitou a 
+        captação de mais de R$ 3 milhões para startups e foi adquirida pelo Grupo BTG Pactual."
         buttonText="Ver projeto"
         buttonLink="/projects/bridgehub"
         model={{
@@ -137,10 +138,10 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Novo modelo de campanhas no POS"
-        description="Participei do desenvolvimento de um modelo unificado para a divulgação de campanhas no POS das marcas Ton e Stone, otimizando o uso de dados móveis e gerando economia para a companhia."
+        title="Campanha PIX 2.0"
+        description="Experiência para o recebimento e leitura de uma campanha de divulgação de nova funcionalidade, PIX 2.0."
         buttonText="Ver projeto"
-        buttonLink="/projects/stonepos"
+        buttonLink="/projects/stonepospix"
         model={{
           type: 'credito',
           alt: 'App login screen',
@@ -158,8 +159,38 @@ export const Home = () => {
           
         }}
       />
+
+<ProjectSummary
+
+id="project-3"
+alternate
+sectionRef={projectThree}
+visible={visibleSections.includes(projectThree.current)}
+index={3}
+title="Novo modelo de campanhas no POS"
+description="Participei do desenvolvimento de um modelo unificado para a divulgação de campanhas no POS das marcas Ton e Stone, otimizando o uso de dados móveis e gerando economia para a companhia."
+buttonText="Ver projeto"
+buttonLink="/projects/stonepos"
+model={{
+  type: 'credito',
+  alt: 'App login screen',
+  textures: [
+    {
+      srcSet: `${stnRecibos} 375w, ${stnRecibos} 750w`,
+      placeholder: gamestackTexturePlaceholder,
+    },
+
+    {
+      srcSet: `${stnPos} 375w, ${stnPos} 750w`,
+      placeholder: gamestackTexturePlaceholder,
+    },
+  ],
+  
+}}
+/>
+
       <ProjectSummary
-        id="project-3"
+        id="project-4"
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}

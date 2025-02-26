@@ -1,25 +1,16 @@
 import backgroundSprPlaceholder from '~/assets/spr-background-placeholder.jpg';
-import imageSprBackgroundVolcanismLarge from '~/assets/spr-background-volcanism-large.jpg';
 import imageSprBackgroundVolcanismPlaceholder from '~/assets/spr-background-volcanism-placeholder.jpg';
-import imageSprBackgroundVolcanism from '~/assets/spr-background-volcanism.jpg';
 import backgroundBrh from '~/assets/background-brh.jpg';
 import brhTelaLarge from '~/assets/brh-tela-large.png';
 import brhBg from '~/assets/bg-brh.jpg';
-import imageSprComponentsDarkLarge from '~/assets/spr-components-dark-large.png';
+import brhResponsive from '~/assets/responsive-light.png';
+import brhLowPlaceholder from '~/assets/Brh-low.png';
 import imageSprComponentsDarkPlaceholder from '~/assets/spr-components-dark-placeholder.png';
-import imageSprComponentsDark from '~/assets/spr-components-dark.png';
-import imageSprComponentsLightLarge from '~/assets/spr-components-light-large.png';
 import imageSprComponentsLightPlaceholder from '~/assets/spr-components-light-placeholder.png';
-import imageSprComponentsLight from '~/assets/spr-components-light.png';
-import imageSprDesignSystemDarkLarge from '~/assets/spr-design-system-dark-large.png';
-import imageSprDesignSystemDarkPlaceholder from '~/assets/spr-design-system-dark-placeholder.png';
-import imageSprDesignSystemDark from '~/assets/spr-design-system-dark.png';
-import imageSprDesignSystemLightLarge from '~/assets/spr-design-system-light-large.png';
-import imageSprDesignSystemLightPlaceholder from '~/assets/spr-design-system-light-placeholder.png';
-import imageSprDesignSystemLight from '~/assets/spr-design-system-light.png';
 import imageSprLessonBuilderDarkPlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
 import imageSprLessonBuilderLightPlaceholder from '~/assets/spr-lesson-builder-light-placeholder.jpg';
-import componentsBrh from '~/assets/components-mobile-desktop.png';
+import componentsBrhLight from '~/assets/componentslight.png';
+import componentsBrhDark from '~/assets/componentsdark.png';
 import videoSprMotionLarge from '~/assets/spr-motion-large.mp4';
 import videoSprMotionPlaceholder from '~/assets/spr-motion-placeholder.jpg';
 import videoSprMotion from '~/assets/spr-motion.mp4';
@@ -70,10 +61,11 @@ const EarthSection = lazy(() =>
 
 const title = 'Uma ponte para investidores e startups';
 const description =
-  'Atuei como Product Designer e Desenvolvedora Frontend neste projeto desafiador que começou com a criação e validação de todo o processo de design, incluindo pesquisas com usuários e alinhamento com o PO. Meses depois, integrei o time de desenvolvimento para implementar o frontend. O projeto foi adquirido pelo BTG Pactual, um dos gigantes do mercado financeiro brasileiro.';
+  'Conduzi o processo de discovery utilizando FigJam, desenhei a interface da plataforma no Figma e colaborei com a equipe no desenvolvimento do frontend com React e Next.js. Para garantir escalabilidade e consistência, documentamos e testamos os componentes isoladamente no Storybook. A plataforma possibilitou a captação de mais de R$ 3 milhões para startups e foi adquirida pelo Grupo BTG Pactual.';
 const roles = [
   'UX and UI Design',
   'Front End Development',
+  'Design Concept',
 ];
 const icons = ['nodejs'];
 
@@ -140,8 +132,8 @@ export const SmartSparrow = () => {
               ou levantar capital. 
               <br></br><br></br>
               O mercado era muito recente no Brasil, e ainda não haviam muitas
-               referências nesse ecossistema. Idealizei o conceito visual utilizando
-               elementos do espaço sideral como analogia à uma exploração de algo novo.
+               referências neste ecossistema. Busquei referência nas também emergentes plataformas 
+               brasileiras e nas já consolidadas pataformas estrangeiras.
             </ProjectSectionText>
           </ProjectTextRow> 
         </ProjectSection>
@@ -151,8 +143,8 @@ export const SmartSparrow = () => {
               key={theme}
               srcSet={
                 isDark
-                  ? `${componentsBrh} 1024w, ${componentsBrh} 2048w`
-                  : `${componentsBrh} 1024w, ${componentsBrh} 2048w`
+                  ? `${componentsBrhDark} 1024w, ${componentsBrhDark} 2048w`
+                  : `${componentsBrhLight} 1024w, ${componentsBrhLight} 2048w`
               }
               width={1024}
               hright={800}
@@ -176,11 +168,11 @@ export const SmartSparrow = () => {
             <ProjectTextRow>
               <ProjectSectionHeading>Ferramentas e time</ProjectSectionHeading>
               <ProjectSectionText>
-                Após validar os primeiros passos com o Product Owner e potenciais usuários (através de pesquisas), 
-                desenvolvi os componentes e layout das telas no Figma. Assim que concluí esta fase do projeto, me 
-                incorporei ao time de desenvolvedores, com mais cinco devs, liderados pelo CTO. Utilizamos o storybook
-                para criar e testar os componentes de forma isolada. A aplicação foi construída utilizando Next.js, 
-                Node.js, MongoDB e alguns serviços em núvem, como AWS Lambda e um serviço de validação de comprovantes de pagamento.
+                Após validar os primeiros passos com um processo de Discovery, 
+                desenvolvi os componentes e desenho das telas no Figma. Assim que concluí esta fase do projeto, me 
+                incorporei ao time de desenvolvedores para realizar a construção do frontend, utilizando React e Next.js.
+                Utilizamos o storybook para documentar e testar os componentes de forma isolada.
+          
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -192,17 +184,17 @@ export const SmartSparrow = () => {
               key={theme}
               srcSet={
                 isDark
-                  ? `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDarkLarge} 2560w`
-                  : `${imageSprDesignSystemLight} 1280w, ${imageSprDesignSystemLightLarge} 2560w`
+                  ? `${brhResponsive} 1280w, ${brhResponsive} 2560w`
+                  : `${brhResponsive} 1280w, ${brhResponsive} 2560w`
               }
               width={1280}
               height={800}
               placeholder={
                 isDark
-                  ? imageSprDesignSystemDarkPlaceholder
-                  : imageSprDesignSystemLightPlaceholder
+                  ? brhLowPlaceholder
+                  : brhLowPlaceholder
               }
-              alt="The homepage of the aero design system docs website linking to principles and components."
+              alt="Imagem de varios dispositivos com a aplicação aberta."
               sizes="100vw"
             />
             <ProjectTextRow>
