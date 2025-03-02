@@ -9,8 +9,8 @@ import brhHome from '~/assets/brh-home-mobile.png';
 import capaStone from '~/assets/Cover.png';
 import capaRtg from '~/assets/site1.5a42175d.webp';
 import brhLaptop from '~/assets/brh-tela-large.png';
-import stnPos from '~/assets/Tela_Campanha.png';
-import stnRecibos from '~/assets/BobinasA8.png';
+import stnPos from '~/assets/launcher-alertview.png';
+import stnRecibos from '~/assets/Campanha-aberta.png';
 import sliceTextureLarge from '~/assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
 import sliceTexture from '~/assets/slice-app.jpg';
@@ -140,7 +140,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectTwo.current)}
         index={2024}
         title="Campanha PIX 2.0"
-        description="Experiência para o recebimento e leitura de uma campanha de divulgação de nova funcionalidade, PIX 2.0."
+        description="Experiência para o recebimento e leitura de uma campanha de divulgação de nova funcionalidade, PIX 2.0. O projeto foi desenvolvido paras as marcas Ton e Stone e exibido para mais de 1,6 milhão de usuários."
         buttonText="Ver projeto"
         buttonLink="/projects/stonepospix"
         model={{

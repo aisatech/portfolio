@@ -8,6 +8,8 @@ import stoneBackgroundLarge from '~/assets/Shooting23-Stone-POS-Woodskull.jpg';
 import sliceBackgroundBarPlaceholder from '~/assets/slice-background-bar-placeholder.jpg';
 import sliceBackgroundBar from '~/assets/slice-background-bar.jpg';
 import stoneBgPlaceholder from '~/assets/Rectangle 1.png';
+import stoneAlertView from '~/assets/launcher-alertview.png';
+import stoneAlertSelected from '~/assets/launcher-alertselected.png';
 import sliceBackground from '~/assets/slice-background.jpg';
 import sliceIrlPlaceholder from '~/assets/slice-irl-placeholder.jpg';
 import sliceIrl from '~/assets/slice-irl.jpg';
@@ -41,7 +43,7 @@ import styles from './stonepospix.module.css';
 
 const title = 'Campanha PIX 2.0';
 const description =
-  'Fui destaque para o desenvolvimento de uma experiência para a divulgação da função PIX na maquininha. A campanha obteve uma taxa de abertura de 46%, acima do esperado para aquele momento';
+  'Fui destaque para o desenvolvimento de uma campanha de divulgação da função PIX para mais 1,6 milhão de usuários, com foco na marca Ton. A campanha alcançou uma taxa de abertura de 46%, refletindo o sucesso em engajar os usuários e promover a adoção do PIX, que nos meses seguintes passou a ser mais utilizado.';
 const roles = ['Research', 'Product Design', ];
 
 export const meta = () => {
@@ -63,7 +65,7 @@ export const Stonepospix = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://www.best.edu.au/s/q2yjjvl7?data=8%404!9%4020303!10%40-15087&version=1"
+          url=""
           roles={roles}
         />
         <ProjectSection padding="top">
@@ -81,22 +83,15 @@ export const Stonepospix = () => {
         <ProjectSection>
           <ProjectSectionColumns centered className={styles.columns}>
             <div className={styles.imagesText}>
-              <ProjectSectionHeading>Bringing it together</ProjectSectionHeading>
+              <ProjectSectionHeading>StoneCo, Ton e Stone</ProjectSectionHeading>
               <ProjectSectionText>
-                Teachers needed a better way to create collaborative group activities by
-                annotating slides on Slice. Before starting this project, a layer could
-                only be annotated by a single user, making it difficult for learners to
-                work together.
-              </ProjectSectionText>
-              <ProjectSectionText>
-                Our solution was to allow users to be invited to a layer, where they can
-                see others’ annotations and make their own.
+              A StoneCo se destaca como uma das líderes no mercado brasileiro de soluções de pagamento. A empresa atua por meio de duas marcas no segmento de adquirência: Ton, dedicada a fornecer soluções para pequenos empreendedores, e Stone, voltada para médios e grandes negócios. Em minha atuação na companhia, sou responsável por colaborar no design e desenvolvimento de experiências de pagamento presencial, ou seja, aquelas realizadas nos dispositivos, comumente conhecidos no Brasil como "maquininhas".
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
               <Image
                 className={styles.sidebarImage}
-                srcSet={`${sliceSidebarLayers} 350w, ${sliceSidebarLayersLarge} 700w`}
+                srcSet={`${stoneAlertSelected} 350w, ${stoneAlertSelected} 700w`}
                 width={350}
                 height={750}
                 placeholder={sliceSidebarLayersPlaceholder}
@@ -105,7 +100,7 @@ export const Stonepospix = () => {
               />
               <Image
                 className={styles.sidebarImage}
-                srcSet={`${sliceSidebarAnnotations} 350w, ${sliceSidebarAnnotationsLarge} 700w`}
+                srcSet={`${stoneAlertView} 350w, ${stoneAlertView} 700w`}
                 width={350}
                 height={750}
                 placeholder={sliceSidebarAnnotationsPlaceholder}
@@ -138,64 +133,9 @@ export const Stonepospix = () => {
             />
           </ProjectSectionContent>
         </ProjectSection>
-        <ProjectSection padding="top">
-          <ProjectSectionContent className={styles.grid}>
-            <div className={styles.gridImage}>
-              <div className={styles.gridBackground}>
-                <Image
-                  srcSet={`${sliceBackgroundBar} 440w, ${sliceBackgroundBarLarge} 880w`}
-                  width={440}
-                  height={790}
-                  placeholder={sliceBackgroundBarPlaceholder}
-                  alt=""
-                  role="presentation"
-                  sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
-                />
-              </div>
-              <div className={styles.gridForeground}>
-                <Image
-                  srcSet={`${sliceAnnotation} 440w, ${sliceAnnotationLarge} 880w`}
-                  width={440}
-                  height={340}
-                  placeholder={sliceAnnotationPlaceholder}
-                  alt="An annotation preview popover with statistics for shape perimeter and area."
-                  sizes={`(max-width: ${media.mobile}px) 584px, (max-width: ${media.tablet}px) 747px, 556px`}
-                />
-              </div>
-            </div>
-            <div className={styles.gridText}>
-              <ProjectSectionHeading>Meaningful details</ProjectSectionHeading>
-              <ProjectSectionText>
-                Marking and annotating areas on high resolution biomedical images is the
-                core experience of the app, and it was easy to get lost or lose sense of
-                scale when zooming in on details. Adding measurements for the perimeter
-                and area of an annotation both helped to communicate the overall scale of
-                the image and how large the annotated feature is in comparison.
-              </ProjectSectionText>
-            </div>
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
-              <ProjectSectionText>
-                Real-time collaborative annotation facilitated better collaboration
-                between learners, and was much easier to run group exercises with the new
-                shared layers feature. Learners gave feedback that is was enjoyable to
-                work together and see what others were doing, and liked how interactive
-                and easy to use the application was.
-              </ProjectSectionText>
-            </ProjectTextRow>
-            <Image
-              src={sliceIrl}
-              width={940}
-              height={500}
-              placeholder={sliceIrlPlaceholder}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
-            />
-          </ProjectSectionContent>
-        </ProjectSection>
+       
+       
+      
       </ProjectContainer>
       <Footer />
     </Fragment>
