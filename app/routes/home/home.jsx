@@ -7,6 +7,7 @@ import gamestackTexture from '~/assets/gamestack-login.jpg';
 import brhPhone from '~/assets/brh-mobile.png';
 import brhHome from '~/assets/brh-home-mobile.png';
 import capaStone from '~/assets/Cover.png';
+import capaRtg from '~/assets/site1.5a42175d.webp';
 import brhLaptop from '~/assets/brh-tela-large.png';
 import stnPos from '~/assets/Tela_Campanha.png';
 import stnRecibos from '~/assets/BobinasA8.png';
@@ -108,11 +109,11 @@ export const Home = () => {
         id="project-1"
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
-        index={1}
+        index={2023}
         title="BridgeHub: uma ponte para investidores e startups"
         description="Desenhei a experiência e interface de um aplicativo de equity crowdfunding e 
         atuei no desenvolvimento do frontend em colaboração com a equipe. A plataforma possibilitou a 
-        captação de mais de R$ 3 milhões para startups e foi adquirida pelo Grupo BTG Pactual."
+        captação de mais de R$ 8 milhões para startups e foi adquirida pelo Grupo BTG Pactual."
         buttonText="Ver projeto"
         buttonLink="/projects/bridgehub"
         model={{
@@ -137,7 +138,7 @@ export const Home = () => {
         alternate
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
-        index={2}
+        index={2024}
         title="Campanha PIX 2.0"
         description="Experiência para o recebimento e leitura de uma campanha de divulgação de nova funcionalidade, PIX 2.0."
         buttonText="Ver projeto"
@@ -161,12 +162,33 @@ export const Home = () => {
       />
 
 <ProjectSummary
+        id="project-3"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
+        index={2023}
+        title="Ready To Go"
+        description="Na Ready To Go, contribuí para o design e desenvolvimento dos aplicativos Light Copy e Stories10x., ambos disponíveis nas lojas por uma assinatura anual. Também participei do design da página de vendas do curso Light Copy, que gerou uma taxa de conversão superior à média do mercado, de forma constante por mais de um ano, ajudando a impulsionar os resultados da startup, que faturou já 120 milhões. "
+        buttonText="Saber mais"
+        buttonLink="/projects/projetointerno"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: `${capaRtg} 800w, ${capaRtg} 1920w`,
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
 
-id="project-3"
+<ProjectSummary
+
+id="project-4"
 alternate
 sectionRef={projectThree}
 visible={visibleSections.includes(projectThree.current)}
-index={3}
+index={2024}
 title="Novo modelo de campanhas no POS"
 description="Participei do desenvolvimento de um modelo unificado para a divulgação de campanhas no POS das marcas Ton e Stone, otimizando o uso de dados móveis e gerando economia para a companhia."
 buttonText="Ver projeto"
@@ -190,10 +212,10 @@ model={{
 />
 
       <ProjectSummary
-        id="project-4"
+        id="project-5"
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
-        index={3}
+        index={5}
         title="Otimização de artigos internos para treinamento de pessoal e LLM's"
         description="Protagonizei um projeto interno que consistiu em otimizar artigos para o treinamento de pessoal e também de LLM's da própria companhia. "
         buttonText="Entre em contato para saber mais"

@@ -2,7 +2,7 @@ import backgroundSprPlaceholder from '~/assets/spr-background-placeholder.jpg';
 import imageSprBackgroundVolcanismPlaceholder from '~/assets/spr-background-volcanism-placeholder.jpg';
 import backgroundBrh from '~/assets/background-brh.jpg';
 import brhTelaLarge from '~/assets/brh-tela-large.png';
-import brhBg from '~/assets/bg-brh.jpg';
+import brhBg from '~/assets/bg-brh-1.png';
 import brhResponsive from '~/assets/responsive-light.png';
 import brhLowPlaceholder from '~/assets/Brh-low.png';
 import imageSprComponentsDarkPlaceholder from '~/assets/spr-components-dark-placeholder.png';
@@ -14,9 +14,10 @@ import componentsBrhDark from '~/assets/componentsdark.png';
 import videoSprMotionLarge from '~/assets/spr-motion-large.mp4';
 import videoSprMotionPlaceholder from '~/assets/spr-motion-placeholder.jpg';
 import videoSprMotion from '~/assets/spr-motion.mp4';
-import imageSprSchema1DarkLarge from '~/assets/spr-schema-1-dark-large.png';
+import newsBrh from '~/assets/noticias-bridgehub.png';
+import imageSprSchema1DarkLarge from '~/assets/noticias-bridgehub.png';
 import imageSprSchema1DarkPlaceholder from '~/assets/spr-schema-1-dark-placeholder.png';
-import imageSprSchema1Dark from '~/assets/spr-schema-1-dark.png';
+import imageSprSchema1Dark from '~/assets/noticias-bridgehub.png';
 import imageSprSchema1LightLarge from '~/assets/spr-schema-1-light-large.png';
 import imageSprSchema1LightPlaceholder from '~/assets/spr-schema-1-light-placeholder.png';
 import imageSprSchema1Light from '~/assets/spr-schema-1-light.png';
@@ -61,7 +62,7 @@ const EarthSection = lazy(() =>
 
 const title = 'Uma ponte para investidores e startups';
 const description =
-  'Conduzi o processo de discovery utilizando FigJam, desenhei a interface da plataforma no Figma e colaborei com a equipe no desenvolvimento do frontend com React e Next.js. Para garantir escalabilidade e consistência, documentamos e testamos os componentes isoladamente no Storybook. A plataforma possibilitou a captação de mais de R$ 3 milhões para startups e foi adquirida pelo Grupo BTG Pactual.';
+  'Conduzi o processo de discovery do projeto, desenhei a interface e experiência da plataforma, e colaborei com a equipe no desenvolvimento do frontend, utilizando React e Next.js. Para garantir escalabilidade e consistência, documentamos e testamos os componentes isoladamente no Storybook. A plataforma possibilitou a captação de mais de R$ 8 milhões para startups e foi adquirida pelo Grupo BTG Pactual no ano de 2023.';
 const roles = [
   'UX and UI Design',
   'Front End Development',
@@ -109,7 +110,7 @@ export const SmartSparrow = () => {
                   : `${brhTelaLarge} 1280w, ${brhTelaLarge} 2560w`
               }
               width={1280}
-              height={800}
+              height={900}
               placeholder={
                 isDark
                   ? imageSprLessonBuilderDarkPlaceholder
@@ -132,8 +133,7 @@ export const SmartSparrow = () => {
               ou levantar capital. 
               <br></br><br></br>
               O mercado era muito recente no Brasil, e ainda não haviam muitas
-               referências neste ecossistema. Busquei referência nas também emergentes plataformas 
-               brasileiras e nas já consolidadas pataformas estrangeiras.
+               referências neste ecossistema. Busquei referência nas também emergentes plataformas brasileiras, e nas já consolidadas plataformas estrangeiras.
             </ProjectSectionText>
           </ProjectTextRow> 
         </ProjectSection>
@@ -198,66 +198,27 @@ export const SmartSparrow = () => {
               sizes="100vw"
             />
             <ProjectTextRow>
-              <ProjectSectionHeading>Processo e rotina</ProjectSectionHeading>
+              <ProjectSectionHeading>Processos e rotina</ProjectSectionHeading>
               <ProjectSectionText>
-                Nossa rotina durante 1 ano foi baseada em metodologias ágeis como Scrum. 
-                Daily-meetings, sprints, e trabalho orientado a resultados faziam parte da nossa rotina.
-                As ferramentas que gerenciavam essa rotina eram Monday e o Microsoft Teams. 
+              Trabalhei por 13 meses neste projeto dentro de um time ágil de 
+              quatro desenvolvedores, CTO e Product Manager. Seguimos metodologias como Scrum, com sprints e entregas contínuas. 
+              Utilizamos Monday e Microsoft Teams para gerenciar backlog, priorizar tarefas de 
+              forma estratégica e realizar nossas daily meetings. 
+              <br></br><br></br>
+              Essa experiência me proporcionou sólido conhecimento em metodologias ágeis, 
+              forte senso de priorização e alto contexto de mercado financeiro, principalmente em renda variável e capital de risco.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
-        <ThemeProvider theme="dark" data-invert>
-          <ProjectSection
-            backgroundOverlayOpacity={0.5}
-            backgroundElement={
-              <Image
-                srcSet={`${brhBg} 1280w, ${brhBg} 2560w`}
-                width={1280}
-                height={900}
-                placeholder={imageSprBackgroundVolcanismPlaceholder}
-                alt="Imagem de um astronauta orbitando a Terra. Fonte: NASA"
-                sizes="100vw"
-              />
-            }
-          >
-            <ProjectSectionColumns width="full">
-              <ProjectSectionContent width="full">
-                <ProjectTextRow width="s">
-                  <ProjectSectionHeading>Design Concept</ProjectSectionHeading>
-                  <ProjectSectionText>
-                    Eu trouxe elementos do espaço sideral para fazer uma analogia com o
-                    mercado de equity crowfunding, que era um universo inexplorado ainda no Brasil. 
-                    Ao mesmo tempo, me apropriei da inovação e tecnologia do ecossistema de engenharia espacial e
-                    trouxe de forma análoga às tecnologias que estavamos inserindo no mercado financeiro. 
-        
-              
-                  </ProjectSectionText>
-                </ProjectTextRow>
-              </ProjectSectionContent>
-              <Image
-                raised
-                className={styles.video}
-                srcSet={`${videoSprMotion} 1280w, ${videoSprMotionLarge} 2560w`}
-                width={1280}
-                height={800}
-                placeholder={videoSprMotionPlaceholder}
-                alt="A learning designer building and deploying an interactive lesson on volcanism using the app."
-                sizes={`(max-width: ${media.mobile}px) 100vw, 50vw`}
-              />
-            </ProjectSectionColumns>
-          </ProjectSection>
-        </ThemeProvider>
+
+
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Encouraging adaptivity</ProjectSectionHeading>
+              <ProjectSectionHeading>Resultados</ProjectSectionHeading>
               <ProjectSectionText>
-                A major part of solving for collaboration was being able to visualize the
-                learner experience in the editor. This was especially beneficial for
-                subject matter experts and instructors need to review and give feedback on
-                the higher level structure without having to dig through all of the
-                adaptivity scenarios screen by screen.
+                O Bridgehub foi citado em alguns canais de notícias pelo sucesso das ofertas disponibilizadas e também pela aquisição. Veja algumas abaixo:
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
@@ -265,8 +226,8 @@ export const SmartSparrow = () => {
               key={theme}
               srcSet={
                 isDark
-                  ? `${imageSprStoryboarderDark} 1280w, ${imageSprStoryboarderDarkLarge} 2560w`
-                  : `${imageSprStoryboarderLight} 1280w, ${imageSprStoryboarderLightLarge} 2560w`
+                  ? `${newsBrh} 1280w, ${newsBrh} 2560w`
+                  : `${newsBrh} 1280w, ${newsBrh} 2560w`
               }
               width={1280}
               height={800}
@@ -280,6 +241,51 @@ export const SmartSparrow = () => {
             />
           </ProjectSectionContent>
         </ProjectSection>
+
+        <ThemeProvider theme="dark" data-invert>
+          <ProjectSection
+            backgroundOverlayOpacity={0.5}
+            backgroundElement={
+              <Image
+                srcSet={`${brhBg} 1280w, ${brhBg} 2560w`}
+                width={1280}
+                height={900}
+                placeholder={imageSprBackgroundVolcanismPlaceholder}
+                alt="Imagem de um astronauta orbitando a Terra. Fonte: NASA"
+                sizes="1000vw"
+              />
+            }
+          >
+            <ProjectSectionColumns width="full">
+              <ProjectSectionContent width="full">
+                <ProjectTextRow width="s">
+                  <ProjectSectionHeading>Design Concept</ProjectSectionHeading>
+                  <ProjectSectionText>
+                  Houve a necessidade de traduzir o conceito de equity crowdfunding, ainda pouco explorado no Brasil, para um público mais amplo. Para isso, desenvolvi uma abordagem criativa, valendo-me de conceitos do espaço sideral para tornar o tema mais acessível. Ao mesmo tempo, me apropriei da tecnologia e inovação da engenharia espacial, traçando paralelos com as soluções que estávamos implementando no mercado financeiro. Essa estratégia não apenas facilitou a compreensão do público sobre um tema complexo, 
+                  mas também reforçou o posicionamento inovador da empresa no setor.
+              
+                  </ProjectSectionText>
+                </ProjectTextRow>
+              </ProjectSectionContent>
+              {/*
+                  <Image
+                  raised
+                  className={styles.video}
+                  srcSet={`${videoSprMotion} 1280w, ${videoSprMotionLarge} 2560w`}
+                  width={1280}
+                  height={800}
+                  placeholder={videoSprMotionPlaceholder}
+                  alt="A learning designer building and deploying an interactive lesson on volcanism using the app."
+                  sizes={`(max-width: ${media.mobile}px) 100vw, 50vw`}
+                 /> 
+
+             */ }
+       
+            </ProjectSectionColumns>
+          </ProjectSection>
+        </ThemeProvider>
+        
+       
         <ProjectSection>
           <ProjectSectionColumns>
             <ProjectSectionContent>
