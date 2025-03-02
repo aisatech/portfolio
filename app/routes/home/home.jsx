@@ -109,7 +109,7 @@ export const Home = () => {
         id="project-1"
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
-        index={2023}
+        index={2022}
         title="BridgeHub: uma ponte para investidores e startups"
         description="Desenhei a experiência e interface de um aplicativo de equity crowdfunding e 
         atuei no desenvolvimento do frontend em colaboração com a equipe. A plataforma possibilitou a 

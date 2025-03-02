@@ -11,28 +11,9 @@ import imageSprLessonBuilderDarkPlaceholder from '~/assets/spr-lesson-builder-da
 import imageSprLessonBuilderLightPlaceholder from '~/assets/spr-lesson-builder-light-placeholder.jpg';
 import componentsBrhLight from '~/assets/componentslight.png';
 import componentsBrhDark from '~/assets/componentsdark.png';
-import videoSprMotionLarge from '~/assets/spr-motion-large.mp4';
-import videoSprMotionPlaceholder from '~/assets/spr-motion-placeholder.jpg';
-import videoSprMotion from '~/assets/spr-motion.mp4';
 import newsBrh from '~/assets/noticias-bridgehub.png';
-import imageSprSchema1DarkLarge from '~/assets/noticias-bridgehub.png';
-import imageSprSchema1DarkPlaceholder from '~/assets/spr-schema-1-dark-placeholder.png';
-import imageSprSchema1Dark from '~/assets/noticias-bridgehub.png';
-import imageSprSchema1LightLarge from '~/assets/spr-schema-1-light-large.png';
-import imageSprSchema1LightPlaceholder from '~/assets/spr-schema-1-light-placeholder.png';
-import imageSprSchema1Light from '~/assets/spr-schema-1-light.png';
-import imageSprSchema2DarkLarge from '~/assets/spr-schema-2-dark-large.png';
-import imageSprSchema2DarkPlaceholder from '~/assets/spr-schema-2-dark-placeholder.png';
-import imageSprSchema2Dark from '~/assets/spr-schema-2-dark.png';
-import imageSprSchema2LightLarge from '~/assets/spr-schema-2-light-large.png';
-import imageSprSchema2LightPlaceholder from '~/assets/spr-schema-2-light-placeholder.png';
-import imageSprSchema2Light from '~/assets/spr-schema-2-light.png';
-import imageSprStoryboarderDarkLarge from '~/assets/spr-storyboarder-dark-large.png';
 import imageSprStoryboarderDarkPlaceholder from '~/assets/spr-storyboarder-dark-placeholder.png';
-import imageSprStoryboarderDark from '~/assets/spr-storyboarder-dark.png';
-import imageSprStoryboarderLightLarge from '~/assets/spr-storyboarder-light-large.png';
 import imageSprStoryboarderLightPlaceholder from '~/assets/spr-storyboarder-light-placeholder.png';
-import imageSprStoryboarderLight from '~/assets/spr-storyboarder-light.png';
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
 import { Link } from '~/components/link';
@@ -212,36 +193,6 @@ export const SmartSparrow = () => {
           </ProjectSectionContent>
         </ProjectSection>
 
-
-        <ProjectSection>
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Resultados</ProjectSectionHeading>
-              <ProjectSectionText>
-                O Bridgehub foi citado em alguns canais de notícias pelo sucesso das ofertas disponibilizadas e também pela aquisição. Veja algumas abaixo:
-              </ProjectSectionText>
-            </ProjectTextRow>
-            <Image
-              raised
-              key={theme}
-              srcSet={
-                isDark
-                  ? `${newsBrh} 1280w, ${newsBrh} 2560w`
-                  : `${newsBrh} 1280w, ${newsBrh} 2560w`
-              }
-              width={1280}
-              height={800}
-              placeholder={
-                isDark
-                  ? imageSprStoryboarderDarkPlaceholder
-                  : imageSprStoryboarderLightPlaceholder
-              }
-              alt="A drag and drop storyboard style editor for creating an adaptive lesson."
-              sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
-            />
-          </ProjectSectionContent>
-        </ProjectSection>
-
         <ThemeProvider theme="dark" data-invert>
           <ProjectSection
             backgroundOverlayOpacity={0.5}
@@ -284,13 +235,13 @@ export const SmartSparrow = () => {
             </ProjectSectionColumns>
           </ProjectSection>
         </ThemeProvider>
-        
-       
+
+        {/*    
         <ProjectSection>
           <ProjectSectionColumns>
             <ProjectSectionContent>
               <ProjectTextRow>
-                <ProjectSectionHeading>
+               <ProjectSectionHeading>
                   An extensible plugin ecosystem usable by everyone
                 </ProjectSectionHeading>
                 <ProjectSectionText>
@@ -340,6 +291,7 @@ export const SmartSparrow = () => {
             </div>
           </ProjectSectionColumns>
         </ProjectSection>
+        */}
         <ThemeProvider theme="dark" data-invert>
           <Suspense>
             <Earth
@@ -414,12 +366,14 @@ export const SmartSparrow = () => {
                   <ProjectSectionContent>
                     <ProjectTextRow center>
                       <ProjectSectionHeading>
-                        Next-generation learning experiences
+                      Uma expedição ao inexplorado
                       </ProjectSectionHeading>
                       <ProjectSectionText>
-                        The flexibility of the product allowed for developers to create
-                        engaging interactive experiences as highly configurable plugins
-                        that could then be used and manipulated by learning designers.
+                         Assim como a vastidão do universo nos desafia a conquistá-lo, 
+                         o design deste produto reflete a jornada de conquista em um mercado inexplorado. 
+                         O impacto dessa jornada se refletiu no crescimento do mercado de equity crowdfunding, 
+                         evoluindo para um ecossistema onde os usuários podem até mesmo revender suas cotas, 
+                        ampliando ainda mais as oportunidades de acesso e troca.
                       </ProjectSectionText>
                     </ProjectTextRow>
                   </ProjectSectionContent>
@@ -439,12 +393,12 @@ export const SmartSparrow = () => {
                   <ProjectSectionContent width="xl">
                     <ProjectTextRow justify="end" width="s">
                       <ProjectSectionHeading level={4} as="h3">
-                        Bringing 3D into learning
+                        Uma expedição dentro da Terra
                       </ProjectSectionHeading>
                       <ProjectSectionText>
-                        One really cool example is the 3D screen plugin. Learning
-                        designers can load any model into it and then configure camera
-                        positions to animate to for each section.
+                       Fazendo uma nova analogia com o conceito de design usado no produto, 
+                       é como se o usuário pudesse explorar 
+                        o mercado na Terra ou fora dela.
                       </ProjectSectionText>
                     </ProjectTextRow>
                   </ProjectSectionContent>
@@ -455,24 +409,18 @@ export const SmartSparrow = () => {
                 camera={[1.17, 0.69, -1.47]}
                 meshes={['Atmosphere', 'EarthFull']}
                 labels={[
-                  'Pacific ring of fire',
-                  'Ruapehu',
-                  'St. Helens',
-                  'Krakatoa',
-                  'Parícutin',
-                  'Kīlauea',
+                
                 ]}
               >
                 <ProjectSection>
                   <ProjectSectionContent width="xl">
                     <ProjectTextRow justify="start" width="s">
                       <ProjectSectionHeading level={4} as="h3">
-                        Interactivity
+                        Democratização dos investimentos de venture capital
                       </ProjectSectionHeading>
                       <ProjectSectionText>
-                        Learners can then be directed to specific parts of the model and
-                        shown labels. They’re also able to click and drag to orbit around
-                        and freely explore at any time.
+                        A plataforma tornou este tipo de investimento acessível para qualquer pessoa. Com o mercado secundário, 
+                        você consegue hoje adquirir frações de uma única cota, e ainda assim particiar de uma fatia do crescimento de uma startup.
                       </ProjectSectionText>
                     </ProjectTextRow>
                   </ProjectSectionContent>
@@ -483,35 +431,8 @@ export const SmartSparrow = () => {
                 camera={[1.81, 0.51, 0.43]}
                 meshes={['Atmosphere', 'EarthFull']}
                 labels={[
-                  'Pacific ring of fire',
-                  'Ruapehu',
-                  'St. Helens',
-                  'Krakatoa',
-                  'Parícutin',
-                  'Kīlauea',
                 ]}
               />
-              <EarthSection
-                animations={['0:loop']}
-                camera={[0.37, 1.02, 1.84]}
-                meshes={['EarthPartial', 'Chunk']}
-                labels={['Mantle', 'Outer core', 'Inner core']}
-              >
-                <ProjectSection>
-                  <ProjectSectionContent width="xl">
-                    <ProjectTextRow justify="end" width="s">
-                      <ProjectSectionHeading level={4} as="h3">
-                        Animation
-                      </ProjectSectionHeading>
-                      <ProjectSectionText>
-                        Learning designers can pick an animation included in the model to
-                        play or loop for any section without having to use any complex
-                        animation tools.
-                      </ProjectSectionText>
-                    </ProjectTextRow>
-                  </ProjectSectionContent>
-                </ProjectSection>
-              </EarthSection>
               <EarthSection
                 scrimReverse
                 animations={['0:loop']}
@@ -521,31 +442,51 @@ export const SmartSparrow = () => {
             </Earth>
           </Suspense>
         </ThemeProvider>
+
+        <ProjectSection>
+          <ProjectSectionContent>
+            <ProjectTextRow>
+              <ProjectSectionHeading>Resultados</ProjectSectionHeading>
+              <ProjectSectionText>
+                As captações promovidas pelo BridgeHub foram um sucesso, ganhando destaque na mídia brasileira. 
+                O projeto do Grupo Voga foi rapidamente adquirido pelo BTG Pactual, um dos maiores líderes do mercado financeiro.
+              </ProjectSectionText>
+            </ProjectTextRow>
+            <Image
+              raised
+              key={theme}
+              srcSet={
+                isDark
+                  ? `${newsBrh} 1280w, ${newsBrh} 2560w`
+                  : `${newsBrh} 1280w, ${newsBrh} 2560w`
+              }
+              width={1280}
+              height={800}
+              placeholder={
+                isDark
+                  ? imageSprStoryboarderDarkPlaceholder
+                  : imageSprStoryboarderLightPlaceholder
+              }
+              alt="A drag and drop storyboard style editor for creating an adaptive lesson."
+              sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
+            />
+          </ProjectSectionContent>
+        </ProjectSection>
+
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow center centerMobile noMargin>
               <svg
-                width="141"
-                height="43"
-                viewBox="0 0 141 43"
+                width="1280"
+                height="180"
+                viewBox="0 0 1904 500"
                 fill="currentColor"
                 style={{ marginBottom: '2em' }}
               >
-                <path d="M87.92 30.05a.3.3 0 0 0-.34-.18l-.04.02c-.42.08-.74.06-.97-.1-.32-.2-.47-.69-.47-1.47V21.3c0-2.75-1.66-4.14-4.94-4.14-2.93 0-5.23 1.37-5.23 3.12 0 .9.55 1.55 1.37 1.64a1.7 1.7 0 0 0 1.42-.56c.72-.75.63-1.64-.25-2.6a3.52 3.52 0 0 1 2.48-.85c1.7 0 2.43 1 2.43 3.33v1.78c-.4.12-.77.24-1.45.4a18.9 18.9 0 0 0-4.7 1.52 3.19 3.19 0 0 0-1.78 2.99c0 1.46.98 3.17 3.73 3.17 1.54 0 2.92-.72 4.33-2.26.12 1.6.74 2.2 2.24 2.2.72 0 1.3-.16 1.98-.49a.4.4 0 0 0 .2-.49Zm-4.54-2.15c-.33.46-1.42 1.83-2.78 1.83-1.84 0-2.23-1.27-2.23-2.34 0-1.75 1.37-2.57 5.01-3.46v3.97Zm35.23 3.25c-3.9 0-6.83-3-6.83-7 0-3.9 3.06-7.09 6.83-7.09 3.81 0 6.8 3.06 6.8 6.98 0 4.4-3.53 7.11-6.8 7.11Zm-.15-13.34c-1.68 0-3.61.72-3.61 6.28 0 4.25 1.27 6.31 3.88 6.31 2.5 0 3.61-1.94 3.61-6.3 0-4.23-1.27-6.29-3.88-6.29Zm-60.06-.5c0 3.24-.8 5.02-4.94 5.02h-2.2v-9.78h2.29c4.28 0 4.85 2.4 4.85 4.76Zm-7.14 11.01v-5.09h1.99c2.96 0 5.22-.61 6.7-1.83a5.06 5.06 0 0 0 1.88-4.03c0-4.65-4.55-5.63-8.37-5.63h.01-7.74a.32.32 0 0 0-.32.31v.03-.01c0 .16.1.3.25.36.69.25 2.56-.1 2.56 1.88v14.01c0 1.02-.46 1.74-2.55 1.94a.31.31 0 0 0-.3.3v.06c0 .17.15.3.33.3h8.27c.18 0 .32-.13.32-.3v-.05a.3.3 0 0 0-.3-.3c-2.27-.19-2.73-.88-2.73-1.95v-5.08 5.08ZM68.1 17.06c-3.6 0-6.53 3.21-6.53 7.17 0 4 2.75 6.9 6.53 6.9 3.18 0 4.73-1.87 5.62-3.28a.31.31 0 0 0-.09-.42l-.04-.03a.32.32 0 0 0-.44.07c-1.17 1.44-2.19 2.28-3.96 2.28-2.23 0-4.62-1.52-4.62-5.79v-.71h9.15c.03 0 .05-.02.05-.05v-.07a5.72 5.72 0 0 0-1.4-4.42 5.67 5.67 0 0 0-4.27-1.65Zm-3.47 5.29c.3-2.92 1.45-4.52 3.26-4.52.91 0 1.58.25 2.06.76.65.7.93 1.96.82 3.76h-6.14Zm41.39.15c-2.5-.69-3.48-1.39-3.48-2.5 0-1.26 1.01-2.17 2.4-2.17 1.65 0 2.36.77 4.1 3.64l.01.03.03.03h.25c.18 0 .32-.14.32-.32v-4.1c0-.03-.02-.05-.02-.05h-.34c-.1 0-.19.04-.25.11l-.55.66a6.64 6.64 0 0 0-2.98-.77c-2.87 0-4.88 1.75-4.88 4.25 0 2.36 1.58 3.24 4.31 3.97 2.66.71 3.6 1.46 3.6 2.85 0 1.54-1.51 2.23-2.59 2.23-2 0-2.84-.73-4.76-4.13l-.02-.04-.02-.02h-.26a.32.32 0 0 0-.32.31v4.6c0 .03.02.06.05.06h.32c.09 0 .17-.04.23-.1l.87-.86c1.03.63 2.56.96 3.56.96 1.5 0 2.72-.47 3.55-1.36a4.54 4.54 0 0 0 1.15-3.14c0-2.14-1.16-3.26-4.28-4.14Zm-15.14 6.78c0 .7-.18.94-1.33 1.01a.32.32 0 0 0-.3.31c0 .18.15.31.32.31h5.66a.3.3 0 0 0 .31-.3c0-.17-.13-.3-.3-.31-1.3-.07-1.65-.28-1.65-1.02v-8.2c.94-1.52 1.6-2.32 2.74-2.56-.06.2-.1.42-.1.6 0 1 .7 1.7 1.72 1.7.99 0 1.68-.7 1.68-1.7 0-.93-.6-2.03-2.28-2.03-1.37 0-2.69.78-3.82 2.64v-2.1a.39.39 0 0 0-.4-.39l-3.56.1a.3.3 0 0 0-.3.3v.05c0 .16.1.3.26.31 1.19.17 1.35.73 1.35 1.3v9.98Zm39.15-12.05c.08 0 .16.04.22.1.06.05.1.13.1.22v2.33s1.17-2.74 4.94-2.74h.04c2.35 0 3.7 1.48 3.7 4.06v8.06c0 .71.18.95 1.32 1.02.17 0 .3.14.3.31 0 .17-.14.31-.32.31h-5.08a.32.32 0 0 1-.03-.63c.92-.08 1.07-.3 1.07-1v-7.29c0-2.4-.7-3.33-2.47-3.33-1.2 0-2.19 1.03-2.8 1.9 0 0-.31.38-.65 1.12l.03 7.6c0 .7.15.92 1.05 1a.32.32 0 0 1-.03.63h-5.06a.32.32 0 0 1-.31-.31c0-.17.13-.3.3-.31 1.14-.08 1.32-.3 1.32-1.02v-9.95c0-.58-.16-1.14-1.36-1.31a.31.31 0 0 1-.26-.31v-.05c0-.17.13-.3.3-.31l3.68-.1Z" />
-                <path
-                  fillRule="evenodd"
-                  d="M35.47 30.82c6.24-11.43 4.15-22.73-4.81-27.77C20.76-2.5 7.84.52 2.28 12.46c-3.84 8.2-2.1 22.48 6.82 27.6 8.92 5.1 20.9.81 26.37-9.23Zm-3.02-12.15c.3-2.3-.24-5.1-2-6.95l-.02-.02c-3.38-3.76-8.06-4-11.02-3.92a16.61 16.61 0 0 0-7.55 2.14c-1.68.86-3.2 2.35-3.81 3.08-.4.47-1.06 1.44-.7 2.31.29.73 1.4.68 1.81.37.22-.16.45-.37.7-.6l.72-.64c2.53-2.07 4.78-3.37 10-3.37 5.23 0 8.06 3.22 8.06 6.09 0 2.87-1.38 4.82-3.97 6.09a10.54 10.54 0 0 1-4.4 1.18c.13-2.78.2-5.41.2-5.41 0-.33.02-.65.03-.96.07-1.55.12-2.72-1.01-2.94-1.36-.27-3.86 0-3.9 1.52-.06-.23.25 12.51.31 12.77l.02.29c.03.32.15.6.35.83a1.38 1.38 0 0 0 .98.41c.28 0 .68-.05 1.09-.16.5-.15 1.02-.39 1.31-.77.15-.2.27-.38.34-.72.04-.24.13-1.72.15-2.15 2.75-.02 5.54-.53 7.67-1.8 2.68-1.62 4.29-4.04 4.64-6.67ZM18.23 32.41a2.12 2.12 0 0 1 1.69 1.99c0 .52-.22.99-.63 1.32-.35.28-.8.43-1.3.43h-.01c-.23 0-.46-.03-.69-.1-.39-.1-.7-.29-.9-.52-.19-.22-.31-.5-.37-.83-.08-.5.05-1.04.36-1.48a1.9 1.9 0 0 1 1.53-.84c.1 0 .22 0 .32.03Z"
-                />
+                <path d="M362.264 296.971l-40.327-111.396h-21.244l56.163 155.395h10.832l56.319-155.395h-21.368l-40.375 111.396zM840.01 185.575h-10.832L773.062 340.97h21.243l40.297-111.396 40.405 111.396h21.368L840.01 185.575zm-268.352 21.269c-15.462-15.537-34.111-23.305-55.961-23.305s-40.499 7.768-55.961 23.305c-15.463 15.536-23.202 34.273-23.202 56.226 0 21.953 7.739 40.69 23.202 56.226 15.462 15.537 34.111 23.305 55.961 23.305s40.499-7.768 55.961-23.305c15.463-15.536 23.202-34.273 23.202-56.226 0-21.953-7.739-40.69-23.202-56.226zm-14.25 98.19c-11.516 11.574-25.393 17.385-41.711 17.385-16.317 0-30.117-5.811-41.633-17.385-11.516-11.575-17.297-25.558-17.297-41.964s5.735-30.343 17.25-41.917c11.516-11.528 25.394-17.339 41.711-17.339 16.318 0 30.195 5.764 41.711 17.339 11.469 11.574 17.25 25.511 17.25 41.917 0 16.406-5.735 30.389-17.25 41.964h-.047.016zm175.25-40.613h20.016v55.248c-15.914 15.288-34.112 22.901-54.61 22.901-21.85 0-40.452-7.722-55.837-23.227-15.385-15.459-23.108-34.181-23.108-56.102 0-21.922 7.692-40.613 23.108-56.102 15.385-15.537 34.019-23.305 55.837-23.305 20.436 0 39.8 8.39 58.075 25.153l-14.981 13.704c-13.8-12.305-28.159-18.442-43.094-18.442-16.162 0-29.993 5.764-41.508 17.292-11.516 11.528-17.25 25.433-17.25 41.746 0 16.313 5.734 30.343 17.25 41.84 11.484 11.528 25.315 17.292 41.508 17.292 13.925 0 25.44-3.682 34.594-11.078v-46.92zM205.93 165.905h21.492l-70.74 174.878h-21.788l71.036-174.878zm44.166-32.083h21.493l-83.717 206.96h-21.788l84.012-206.96zm-135.34 126.684l-25.363-62.503H67.901l36.023 89.179 10.832-26.676zm25.672-9.959l-25.673 63.482 10.832 26.754 57.639-142.795h-21.461l-21.337 52.544v.015zM984.167 38.972h-4.223v396.663h4.223V38.972zm476.653 233.294c0 18.615-6.19 25.551-22.82 25.551-15.75 0-23.71-7.678-23.71-22.841v-9.259c0-18.146 6.79-25.55 23.35-25.55 16.57 0 23.16 7.113 23.16 25.389v6.726h.02v-.016zm-23.16-38.358c-20.47 0-29.99 10.114-29.99 31.825v59.07h6.46v-30.341c4.67 6.081 13.38 9.629 23.9 9.629 20.37 0 29.45-9.807 29.45-31.825v-6.726c0-21.905-9.19-31.648-29.82-31.648v.016zm87.97 49.988c0 10.162-5.26 13.937-19.36 13.937h-2.72c-13.7 0-19.55-4.452-19.55-14.84v-1.097c0-11.275 5.53-16.114 18.47-16.114h1.08c15.49 0 22.09 4.661 22.09 15.566v2.548h-.01zm-22.98-48.891h-17.51l-1.45 6.291h18.96c17.18 0 22.98 4.613 22.98 18.308v6.629c-4.29-4.306-11.9-6.484-22.65-6.484-17.13 0-25.45 7.275-25.45 22.195v1.097c0 14.018 8.26 21.115 24.55 21.115h4.35c17.01 0 25.65-7.114 25.65-21.115v-23.437c0-17.453-8.53-24.567-29.45-24.567m47.77 37.294v-5.807c0-18.599 6.35-25.18 24.27-25.18h15.12l1.45-6.291h-16.57c-21.37 0-30.88 9.695-30.88 31.471v5.807c0 21.76 9.53 31.47 30.88 31.47h15.31l1.46-6.291h-16.78c-17.46 0-24.28-7.065-24.28-25.195m145.96 4.532c0 16.195-5.06 21.373-20.8 21.373-15.75 0-20.47-5.388-20.47-21.373v-41.826h-6.64v41.826c0 19.905 7.6 27.664 27.07 27.664s27.27-8.001 27.27-27.664v-41.826h-6.46v41.826h.03zm-59.76-35.551l1.45-6.291h-28.87v-17.953l-6.64 1.193v61.49c0 17.517 6.56 24.034 24.2 24.034h9.52l1.21-6.291h-10.75c-13.3 0-17.55-4.226-17.55-17.389v-38.793h27.43zm145.41 62.828h6.46v-95.073h-6.46v95.073zm-422.71-31.648c0 14.082-4.93 18.421-19.16 18.421-15.99 0-19.17-5.533-19.17-21.857v-2.549c0-16.162 2.84-22.018 19.17-22.018 16.33 0 19.16 5.695 19.16 22.148v5.855zm-19.16-44.472c-27.38 0-39.94 11.534-39.94 37.891v4.032c0 25.002 10.93 37.132 36.63 37.132 8.22 0 16.46-1.484 22.29-6.145v3c0 14.082-6.14 18.711-20.48 18.711h-8.59c-4.93.097-7.16.968-10.11 5.823-24.66 39.052-67.48 62.925-114.16 62.925-74.44 0-135.03-60.634-135.03-135.14 0-74.507 60.57-135.141 135.03-135.141 52.29 0 99.88 30.309 122.14 77.49h6.21c-22.68-50.52-72.98-83.136-128.35-83.136-77.55 0-140.67 63.151-140.67 140.787 0 77.635 63.1 140.754 140.67 140.754 45.63 0 87.71-21.873 113.95-58.199h20.12c26.48 0 40.1-10.017 40.1-35.632V264.54c0-25.454-13.02-36.536-39.78-36.536m-152.42 16.469c14.36 0 19.45 5.695 19.45 22.615v6.291c0 16.469-5.09 22.147-19.74 22.147-14.65 0-19.76-5.694-19.76-22.308v-8.533c0-15.114 5.09-20.212 20.05-20.212zm-40.7-44.761v73.506c0 27.244 12.56 38.616 39.94 38.616 27.39 0 40.99-11.082 40.99-38.487v-7.033c0-25.76-11.67-38.326-37.1-38.326-8.06 0-16.91 1.645-22.89 6.291v-37.89l-20.94 3.306v.017zm142.85 47.6l3.43-16.759h-29.62v-22.905l-20.78 3.145v68.409c0 23.664 9.29 30.68 34.56 30.68h11.07l3.44-16.63h-13.03c-11.52 0-15.26-2.839-15.26-15.405v-30.551h26.19v.016zm472.35 36.584c0 10.017-5.48 13.937-19.55 13.937h-2.72c-13.57 0-19.36-4.452-19.36-14.84v-1.097c0-11.275 5.53-16.114 18.47-16.114h1.1c15.48 0 22.09 4.661 22.09 15.566v2.548h-.03zm-23.16-48.891h-17.49l-1.45 6.291h18.96c17.32 0 23.16 4.613 23.16 18.308v6.629c-4.31-4.306-11.9-6.484-22.65-6.484-17.13 0-25.45 7.275-25.45 22.195v1.097c0 14.018 8.21 21.115 24.39 21.115h4.35c17.13 0 25.82-7.114 25.82-21.115v-23.437c0-17.453-8.59-24.567-29.62-24.567" />
               </svg>
-              <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
-              <ProjectSectionText>
-                Ultimately the project was successful after Smart Sparrow and the aero
-                platform were{' '}
-                <Link href="https://www.prnewswire.com/news-releases/pearson-acquires-interactive-learning-technology-from-smart-sparrow-300987673.html">
-                  acquired by Pearson in 2020
-                </Link>{' '}
-                to become a foundation for their next generation learning platform.
-              </ProjectSectionText>
+             
+             
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
