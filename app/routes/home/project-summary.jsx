@@ -32,12 +32,6 @@ export function ProjectSummary({
   ...rest
 }) {
 
-  const viewBoxMapping = {
-    "katakana-project": "0 0 162 33",
-    "outro-id": "0 0 200 50", // outro tamanho para outro ID
-    // Adicione mais mapeamentos conforme necessário
-  };
-
   const [focused, setFocused] = useState(false);
   const [modelLoaded, setModelLoaded] = useState(false);
   const { theme } = useTheme();
@@ -46,7 +40,6 @@ export function ProjectSummary({
   const titleId = `${id}-title`;
   const isMobile = width <= media.tablet;
   const svgOpacity = theme === 'light' ? 0.7 : 1;
-  const viewBox = viewBoxMapping[id] || "0 0 162 33"; 
   const indexText = index < 10 ? `0${index}` : index;
   const creditoSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
   const phoneSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
@@ -57,6 +50,7 @@ export function ProjectSummary({
   }
 
   function renderKatakana(device, visible) {
+    
 
   
     return (
@@ -67,9 +61,9 @@ export function ProjectSummary({
         style={cssProps({ opacity: svgOpacity })}
         className={styles.svg}
         data-device={device}
-        viewBox={viewBox}
+
       >
-      <use href={`${katakana.split('?')[0]}#katakana-project`} />
+      <use href={`${katakana.split('?')[0]}$`} />
 
 
       </svg>

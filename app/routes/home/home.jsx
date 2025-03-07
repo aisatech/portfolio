@@ -60,10 +60,11 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -168,8 +169,8 @@ export const Home = () => {
         index={2023}
         title="Ready To Go"
         description="Na Ready To Go, contribuí para o design e desenvolvimento dos aplicativos Light Copy e Stories10x., ambos disponíveis nas lojas por uma assinatura anual. Também participei do design da página de vendas do curso Light Copy, que gerou uma taxa de conversão superior à média do mercado, de forma constante por mais de um ano, ajudando a impulsionar os resultados da startup, que faturou já 120 milhões. "
-        buttonText="Saber mais"
-        buttonLink="/projects/projetointerno"
+        buttonText="Visite o site da empresa"
+        buttonLink="https://readytogo.com.br"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -182,7 +183,9 @@ export const Home = () => {
         }}
       />
 
+{/*
 <ProjectSummary
+
 
 id="project-4"
 alternate
@@ -209,12 +212,12 @@ model={{
   ],
   
 }}
-/>
+/> */}
 
       <ProjectSummary
-        id="project-5"
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
+        id="project-4"
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
         index={5}
         title="Otimização de artigos internos para treinamento de pessoal e LLM's"
         description="Protagonizei um projeto interno que consistiu em otimizar artigos para o treinamento de pessoal e também de LLM's da própria companhia. "

@@ -1521,18 +1521,18 @@ const disciplines = [
   "Prototyper",
   "Modder"
 ];
-const url$1 = "https://hamishw.com";
-const bluesky = "hamishw.com";
-const figma = "@Hamish";
-const github = "HamishMW";
-const repo = "https://github.com/HamishMW/portfolio";
+const url$1 = "https://belinhajobs.com";
+const xtwitter = "@aIsaTech";
+const figma = "@AIsaTech";
+const github = "aIsaTech";
+const repo = "https://github.com/aisatech/portfolio";
 const ascii = "__  __  __\n\\ \\ \\ \\ \\∕\n \\ \\∕\\ \\\n  \\∕  \\∕\n";
 const config = {
   name: name$2,
   role,
   disciplines,
   url: url$1,
-  bluesky,
+  xtwitter,
   figma,
   github,
   repo,
@@ -1558,8 +1558,8 @@ const navLinks = [
 ];
 const socialLinks = [
   {
-    label: "Bluesky",
-    url: `https://bsky.app/profile/${config.bluesky}`,
+    label: "Twitter",
+    url: `https://bsky.app/profile/${config.xtwitter}`,
     icon: "bluesky"
   },
   {
@@ -1888,7 +1888,7 @@ function App() {
     console.info(
       `${config.ascii}
 `,
-      `Taking a peek huh? Check out the source code: ${config.repo}
+      `Dando uma olhadinha? Check out the source code: ${config.repo}
 
 `
     );
