@@ -32,6 +32,12 @@ export function ProjectSummary({
   ...rest
 }) {
 
+  const viewBoxMapping = {
+    "katakana-project": "0 0 162 33",
+    "katakana-project-1": "0 0 162 33",
+    "katakana-default": "0 0 300 100", 
+  };
+
   const [focused, setFocused] = useState(false);
   const [modelLoaded, setModelLoaded] = useState(false);
   const { theme } = useTheme();
@@ -39,6 +45,8 @@ export function ProjectSummary({
   const isHydrated = useHydrated();
   const titleId = `${id}-title`;
   const isMobile = width <= media.tablet;
+  const katakanaId = `katakana-${id}`;
+  const viewBox = viewBoxMapping[katakanaId] || "0 0 162 33";
   const svgOpacity = theme === 'light' ? 0.7 : 1;
   const indexText = index < 10 ? `0${index}` : index;
   const creditoSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
@@ -49,7 +57,10 @@ export function ProjectSummary({
     setModelLoaded(true);
   }
 
-  function renderKatakana(device, visible) {
+  function renderKatakana(id, device, visible) {
+   
+   
+   
     
 
   
@@ -61,9 +72,10 @@ export function ProjectSummary({
         style={cssProps({ opacity: svgOpacity })}
         className={styles.svg}
         data-device={device}
+        viewBox={viewBox}
 
       >
-      <use href={`${katakana.split('?')[0]}$`} />
+      <use href={`${katakana.split('?')[0]}#${katakanaId}`} />
 
 
       </svg>
@@ -106,12 +118,15 @@ export function ProjectSummary({
   }
 
   function renderPreview(visible) {
+
+
+
     return (
       <div className={styles.preview}>
 
 {model.type === 'credito' && (
           <>
-           {renderKatakana('credito', visible)} 
+           {renderKatakana( id, visible)} 
             <div className={styles.model} data-device="credito">
               {!modelLoaded && (
                 <Loader center className={styles.loader} data-visible={visible} />

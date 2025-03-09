@@ -5,9 +5,9 @@ import sliceAppLarge from '~/assets/slice-app-large.jpg';
 import sliceApp from '~/assets/slice-app.jpg';
 import sliceBackgroundBarLarge from '~/assets/slice-background-bar-large.jpg';
 import stoneBackgroundLarge from '~/assets/Shooting23-Stone-POS-Woodskull.jpg';
-import sliceBackgroundBarPlaceholder from '~/assets/slice-background-bar-placeholder.jpg';
-import sliceBackgroundBar from '~/assets/slice-background-bar.jpg';
-import stoneBgPlaceholder from '~/assets/Rectangle 1.png';
+import campanhaLarge from '~/assets/CampanhaPIXLarge.png';
+import campanhaPlaceholder from '~/assets/CampanhaPIXPlaceholder.png';
+import stoneBgPlaceholder from '~/assets/backgroundStonePlaceholder.png';
 import stoneAlertView from '~/assets/launcher-alertview.png';
 import stoneAlertSelected from '~/assets/launcher-alertselected.png';
 import sliceBackground from '~/assets/slice-background.jpg';
@@ -71,10 +71,10 @@ export const Stonepospix = () => {
         <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectImage
-              srcSet={`${sliceApp} 800w, ${sliceAppLarge} 1920w`}
+              srcSet={`${campanhaLarge} 800w, ${campanhaLarge} 1920w`}
               width={800}
               height={500}
-              placeholder={stoneBgPlaceholder}
+              placeholder={campanhaPlaceholder}
               alt="Maquininha P2 da Stone sendo segurada na mão"
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
