@@ -58,11 +58,6 @@ export function ProjectSummary({
   }
 
   function renderKatakana(id, device, visible) {
-   
-   
-   
-    
-
   
     return (
       <svg

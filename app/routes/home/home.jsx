@@ -168,7 +168,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectThree.current)}
         index={2023}
         title="Ready To Go"
-        description="Na Ready To Go, contribuí para o design e desenvolvimento dos aplicativos Light Copy e Stories10x., ambos disponíveis nas lojas por uma assinatura anual. Também participei do design da página de vendas do curso Light Copy, que gerou uma taxa de conversão superior à média do mercado, de forma constante por mais de um ano, ajudando a impulsionar os resultados da startup, que faturou já 120 milhões. "
+        description="Na Ready To Go, contribuí para o design e desenvolvimento dos aplicativos Light Copy e Stories10x., ambos disponíveis nas lojas por uma assinatura anual. Também participei do design da página de vendas do curso Light Copy, que gerou uma taxa de conversão superior à média do mercado, ajudando a impulsionar os resultados da startup, que já faturou 120 milhões. "
         buttonText="Visite o site da empresa"
         buttonLink="https://readytogo.com.br"
         model={{
