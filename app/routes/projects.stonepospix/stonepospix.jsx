@@ -110,29 +110,8 @@ export const Stonepospix = () => {
             </div>
           </ProjectSectionColumns>
         </ProjectSection>
-        <ProjectSection light>
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Improving the experience</ProjectSectionHeading>
-              <ProjectSectionText>
-                A problem we heard about often form users was that it was difficult to
-                find images they had previously seen or worked on. To solve this we added
-                a new tab that lists all previously annotated slides. In addition, we
-                added the ability to favorite slides, so if users find an interesting
-                slide they want to annotate later, they can easily save it to their
-                account.
-              </ProjectSectionText>
-            </ProjectTextRow>
-            <Image
-              srcSet={`${sliceSlides} 800w, ${sliceSlidesLarge} 1920w`}
-              width={800}
-              height={500}
-              placeholder={sliceSlidesPlaceholder}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
-              sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
-            />
-          </ProjectSectionContent>
-        </ProjectSection>
+      
+          
        
        
       

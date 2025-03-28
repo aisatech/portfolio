@@ -40,7 +40,7 @@ function ArticlesPost({ slug, frontmatter, timecode, index }) {
     >
       {featured && (
         <Text className={styles.postLabel} size="s">
-          Featured
+          Destaque
         </Text>
       )}
       {featured && !!banner && (
@@ -76,7 +76,7 @@ function ArticlesPost({ slug, frontmatter, timecode, index }) {
           </Text>
           <div className={styles.postFooter}>
             <Button secondary iconHoverShift icon="chevron-right" as="div">
-              Read article
+             Leia agora
             </Button>
             <Text className={styles.timecode} size="s">
               {timecode}
@@ -84,11 +84,7 @@ function ArticlesPost({ slug, frontmatter, timecode, index }) {
           </div>
         </div>
       </RouterLink>
-      {featured && (
-        <Text aria-hidden className={styles.postTag} size="s">
-          477
-        </Text>
-      )}
+    
     </article>
   );
 }
